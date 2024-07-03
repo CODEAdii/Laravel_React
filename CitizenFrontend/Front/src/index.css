@@ -1,0 +1,765 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+    box-sizing: border-box;
+}
+html, body, #root, #defaultLayout, #guestLayout {
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #212121;
+    background-color: #f6f6f6;
+}
+
+input {
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 2px solid #e6e6e6;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #5b08a7;
+}
+
+.btn,
+.btn-add,
+.btn-edit,
+.btn-delete {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #5b08a7;
+    border: 0;
+    text-decoration: none;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-add,
+.btn-edit,
+.btn-delete{
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.btn-add {
+    background-color: #00a762;
+}
+.btn-delete {
+    background-color: #b72424;
+}
+
+.btn-logout {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    color: #212121;
+    transition: all 0.3s;
+    border-radius: 6px;
+}
+.btn-logout:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background: #5b08a7;
+}
+
+.text-center {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table > thead > tr > th {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+    background-color: #efefef;
+}
+
+table > tbody > tr > td {
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid #efefef;
+    white-space: nowrap;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.alert {
+    padding: 1rem;
+    background-color: #ff4040;
+    color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.notification {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+    padding: 1rem 1.5rem;
+    background-color: #00a762;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* Login/Signup forms*/
+
+.login-signup-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-signup-form .form {
+    width: 360px;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 34px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.login-signup-form .title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-signup-form .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-signup-form .form .message a {
+    color: #5b08a7;
+    text-decoration: none;
+}
+
+/* Login/Signup form */
+
+
+#defaultLayout {
+    display: flex;
+}
+
+/* #defaultLayout aside {
+    width: 240px;
+    background-color: #5b08a7;
+    padding: 1rem
+} */
+
+#defaultLayout aside > a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+#defaultLayout aside > a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#defaultLayout .content {
+    flex: 1;
+}
+
+#defaultLayout header {
+    height: 80px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.default-layout .link-style {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+#defaultLayout main {
+    padding: 2rem;
+}
+
+
+
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+
+    
+    background-color: #f8f8f8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #5b08a7;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #8d38db;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+}
+
+/* .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+} */
+
+.text{
+    color: #080808;
+
+}
+.Gender{
+    color: #212121;
+    margin-top: 2rem;
+    margin-bottom: 10 rem;
+}
+.h2kyc{
+    text-align: center;
+    color: #5b08a7;
+    font-size: x-large;
+    margin-bottom: 2rem;
+}
+.card h2,
+.card h3 {
+  margin-bottom: 1rem;
+  color: #212121;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.sidebar {
+    background-color: #008793e7; /* Set your desired background color */
+    padding: 20px; /* Adjust padding as needed */
+    width: 260px;
+    padding: 1rem
+}
+
+.logo-container {
+    background-color: white; /* Set the background to white */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 50%; /* Make the container round if the logo is circular */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); /* Add a soft white glow */
+}
+
+.logo-image {
+    max-width: 100%; /* Ensure the logo fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's a block element */
+}
+/* //////////////HOME PAGEEEE//////////////// */
+/* Updated CSS with individual card colours, hover effects, gaps, and curved borders */
+
+.HomeApp {
+    font-family: Arial, sans-serif;
+  }
+  
+  .homeHeader {
+    background-color: #1f6325;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navhead{
+ color: #60627a;
+  }
+  .homeHeader{
+    color: white;
+    font-size: x-large;
+    padding: 2rem 1rem;
+    font-weight: bold;
+    font-style: italic;
+    
+  }
+  .homeLogo {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .homeLogoImg {
+    height: 20px;
+    margin-right: 10px;
+    
+  }
+  
+  .homeNav {
+    display: flex;
+  }
+  
+  .homeNav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .homeContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .homeMainCards {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between cards */
+  }
+  
+  .homeMainCard {
+    width: calc(45% - 10px); /* Adjust width to accommodate the gap */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Add border radius for curved corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+
+  }
+  
+  .homeMainCard:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+  }
+  
+  /* Individual card colours */
+  .homeMainCard:nth-child(1) {
+    background-color: #b7ebd5;
+    border-color: #04bd76;
+    box-shadow: #000000;
+    
+  }
+  
+  .homeMainCard:nth-child(2) {
+    background-color: #add8e6;
+    border-color: #0e82cf;
+    box-shadow: #000000;
+  }
+  
+  .homeMainCard:nth-child(3) {
+    background-color: #ffe4b5;
+    border-color: #cf9344;
+    box-shadow: #000000;
+  }
+  
+  .homeMainCard:nth-child(4) {
+    background-color: #bbf1bb;
+    border-color: #3ea153;
+    box-shadow: #000000;
+  }
+  .homeMainCard:nth-child(5) {
+    background-color: #e5cae7;
+    border-color: #d896d8;
+    box-shadow: #000000;
+  }
+  .homeMainCard:nth-child(6) {
+    background-color: #8be7ee;
+    border-color: #3c989b;
+    box-shadow: #000000;
+  }
+  .homeMainCard:nth-child(7) {
+    background-color: #e0e780;
+    border-color: #a5a14f;
+    box-shadow: #000000;
+  }
+  .homeMainCard:nth-child(8) {
+    background-color: #f5dfd6;
+    border-color: #e9746b;
+    box-shadow: #000000;
+  }
+  .homeMainCard h2,
+.homeMainCard p {
+    word-wrap: break-word;
+}
+  .downloadbtn, .guidebtn {
+    color: #3f0764;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: inline-block; /* Ensure buttons stay inline */
+    max-width: 100%; /* Set maximum width */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  .homeServices {
+    width: 35%;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  .homeMainCards{
+    background-color:#f0f0f0;
+  }
+  
+  .homeServices h2 {
+    margin-bottom: 10px;
+  }
+
+.serviceHeading {
+    background-color: rgba(30, 130, 170, 0.959);
+    color: white;
+    padding: 10px 10px;
+    
+   
+  }
+  
+  .homeServiceCard {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ccc;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    display: flex;
+    align-items: center;
+
+ }
+ .homeServiceCard .icons {
+    margin-right: 10px; /* Add spacing between the icon and the content */
+  }
+    .homeServiceCard h3,
+    .homeServiceCard p {
+    margin: 0; /* Remove default margin */
+    }
+    .homeServiceCard a {
+        position: absolute; /* Set position to absolute */
+        bottom: 5px; /* Adjust bottom spacing */
+        right: 5px; /* Adjust right spacing */
+        color: #3f0764; /* Adjust link color */
+      } 
+  
+  .homeServiceCard:hover {
+    background-color: #bbb;
+    transform: scale(1.1);
+  }
+
+  .homeServiceCard:nth-child(2) {
+    background-color: #dfbaba;
+    border-color: #04bd76;
+    box-shadow: #000000;
+  }
+
+  .homeServiceCard:nth-child(3) {
+    background-color: #f5c7c7;
+    border-color: #f0928c;
+    box-shadow: #000000;
+  }
+  .homeServiceCard:nth-child(4) {
+    background-color: #31804f2f;
+    border-color: #6bbd9e;
+    box-shadow: #000000;
+  }
+  .homeServiceCard:nth-child(5) {
+    background-color: #eeedc5d0;
+    border-color: #979631;
+    box-shadow: #000000;
+  }
+  .homeServiceCard:nth-child(6) {
+    background-color: #d6aa712f;
+    border-color: #d8bf9a;
+    box-shadow: #000000;
+  }
+  .homeServiceCard:nth-child(7) {
+    background-color: #d2d6ee;
+    border-color: #b7aed8;
+    box-shadow: #000000;
+  }
+
+ .homeLogo {
+  background-color: rgb(230, 228, 228); /* Set the background to white */
+    padding: 1px; /* Adjust padding as needed */
+    border-radius: 50%; /* Make the container round if the logo is circular */
+ }
+
+.homeLogoImg {
+    max-width: 30%; /* Ensure the logo fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's a block element */
+   
+}
+
+
+
+
+
+/* ////Contact//// */
+.contact-page {
+    padding: 20px;
+  }
+  
+  .contact-page h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .contact-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contact-info,
+  .contact-form {
+    flex: 1;
+  }
+  
+  .contact-info h2,
+  .contact-form h2 {
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 5px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #5b08a7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #3f0764;
+  }
+  
+/* ////aboutus// */
+.about-us-page {
+    padding: 20px;
+  }
+  
+  .about-us-page h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+
+  /* ----btn-- */
+  .button-73 {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1rem; /* Reduced font size */
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 0.75rem 1rem; /* Reduced padding */
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-73:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.1); /* Slightly smaller scale on hover */
+        transform: scale(1.1);
+
+  }
+  
+  .button-73:active {
+    transform: scale(1.05); /* Slightly smaller scale when active */
+  }
+  .icons{
+    max-width: 20%; /* Ensure the logo fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+  }
+  
+.formbtn{
+    border-radius: 0.6rem;
+    font-size: medium;
+    border-color: rgb(245, 232, 230);
+    padding: 0.3rem 0.5rem;
+    background-color: #e9dcdc;
+    
+}
+.formbtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #7be9a0;
+    box-shadow: #1cd43b 0 -6px 8px inset;
+    transform: scale(1.1); /* Slightly smaller scale on hover */
+        transform: scale(1.1);
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links,
+.footer-social,
+.footer-copyright {
+  flex-basis: 30%;
+  margin-bottom: 2rem;
+}
+
+.slider {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center; 
+}
+.slider img {
+  width: 100%;
+  height: auto; /* This will maintain the aspect ratio of the images */
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 300px; /* You can adjust the height for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider {
+    height: 200px; /* You can adjust the height for very small screens */
+  }
+}
+
+
+
+  @media (min-width: 768px) {
+    .button-73 {
+      font-size: 0.5rem;
+      padding: 0.5rem 1.5rem; /* Adjusted padding for larger size */
+    }
+  }
+  /* Ensure the card adapts its size based on screen width */
+@media screen and (max-width: 768px) {
+    .homeMainCard,.homeServiceCard {
+      width: calc(100% - 20px); /* Adjust width to fit within the screen */
+    }
+  }
+  
+ 
+  
+  
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

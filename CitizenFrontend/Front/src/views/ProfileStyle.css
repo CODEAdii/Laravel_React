@@ -1,0 +1,471 @@
+.is-* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  body {
+    box-sizing: border-box;
+  }
+  
+  .warpper {
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    background: lightblue;
+  }
+  
+  .containerBox {
+    width: 85%;
+    margin: 0px auto;
+  }
+  
+  header {
+    width: 100%;
+    background: white;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+  }
+  
+  header .headerTop {
+    background: #232020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .headerTop img {
+    width: 30px;
+  }
+  
+  header .headerTop .govt {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+  }
+  
+  header .headerTop .govt p {
+    color: white;
+  }
+  
+  header .ilrms {
+    width: 100%;
+    background: #fff;
+    height: 80px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  header .ilrms .containerBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header .ilrms .containerBox .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+  }
+  
+  header .ilrms .containerBox .cleanIndia img {
+    width: 130px;
+    margin: 5px;
+  }
+  
+  header .ilrms .containerBox .logo img {
+    width: 40px;
+  }
+  
+  header .ilrms .headerSkew {
+    width: 320px;
+    height: 80px;
+    background: #008793;
+    clip-path: polygon(0% 0, 100% 0%, 75% 100%, 0% 100%);
+    position: absolute;
+    z-index: 1;
+  }
+  
+  header .containerBox {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+  
+  header .logo {
+    color: #f8f6f6;
+    font-size: 35px;
+    font-family: "Abril Fatface", serif;
+    font-style: normal;
+    letter-spacing: 1px;
+  }
+  
+  header .logo img {
+    width: 40px;
+  }
+  
+  header .logout button {
+    border: 1.5px solid rgb(59 186 186);
+    border-radius: 50px;
+    padding: 4px 12px;
+    margin: 5px 0px;
+    transition: 0.5s linear;
+    cursor: pointer;
+    background: white;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+  header .logout button i {
+    font-size: 18px;
+  }
+  
+  header .logout button:hover {
+    background: rgb(59 186 186);
+  }
+  
+  .titleBanner {
+    width: 100%;
+    height: 175px;
+    background: url(../images/titlebg1.jpg);
+    background-size: cover;
+    background-position: 100% 380px;
+  }
+  
+  .profile {
+    width: 100%;
+    background: white;
+    display: flex;
+    height: 135px;position: relative;
+    z-index: 8;
+  }
+  
+  .profile .containerBox {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+  }
+  
+  .userImg {
+    width: auto;
+  }
+  
+  .userDetail {
+    flex: 1 1;
+  }
+  
+  .userImg img {
+    border-radius: 50%;
+    border: 5px solid white;
+    width: 170px;
+    height: 170px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-top: 0px;
+  }
+  
+  .userDetail span {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #535151;
+  }
+  
+  .rightSkew {
+    clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
+    width: 370px;
+    background: #008793;
+    position: absolute;
+    right: 0px;
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .phone {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .phone span {
+    font-size: 16px;
+  }
+  
+  .rightSkew h2 {
+    color: white;
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+  
+  .middle {
+    width: 100%;
+    background: #f1f1f1;
+    padding: 70px 0px 50px;
+    position: relative;
+  }
+  
+  .middle .containerBox {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .sideBar {
+    flex-basis: 350px;
+    background: linear-gradient(0deg, #000000e4, #008793e7), url(../images/home.png) no-repeat;
+    /* background: #008793; */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: sticky;
+    top: 190px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sideBarData {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sdata ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+  
+  .sdata img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    border: 9px solid #f0f0f1;
+    margin-top: -100px;
+    margin-bottom: 20px;
+  }
+  
+  .sdata ul li {
+    margin-bottom: 16px;
+    color: white;
+    position: relative;
+    line-height: 20px;
+  }
+  
+  .sdata ul li i {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+  }
+  
+  .sdata ul li p {
+    margin-left: 40px;
+  }
+  
+  .sdata ul li:nth-child(1) {
+    color: yellow;
+  }
+  
+  .sdataul li:nth-child(2) {
+    color: rgb(240, 244, 242);
+  }
+  
+  .sdata ul li:nth-child(3) {
+    color: rgb(26 223 229);
+  }
+  
+  .sdata ul li:nth-child(4) {
+    color: rgb(243, 172, 18);
+  }
+  
+  .sdata ul li:nth-child(5) {
+    color: rgb(237, 34, 210);
+  }
+  
+  .sdata ul li:nth-child(6) {
+    color: rgb(76 232 189);
+  }
+  
+  .tableData {
+    flex: 1 1;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .tableData .detailBox {
+    display: block;
+    background: linear-gradient(to right top, #008793, #00bf72, #a8eb12);
+    padding: 13px 18px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .tableData table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  
+  .tableData .usertable {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    background: #f4eeee;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  /* .tableData table tr:nth-child(even) {
+      background-color: #dddddd;
+  } */
+  
+  .tableData table tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tableData table tr:first-child {
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .tableData table tr:last-child {
+    border-bottom: 0px solid #ccc;
+  }
+  
+  .tableData table tr td {
+    padding: 12px;
+  }
+  
+  .tableData table tr th {
+    padding: 12px 8px;
+    text-align: left;
+    background: #cecece;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .tableData table tr td button {
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1.5px solid #008793;
+    width: 80px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.4s linear;
+  }
+  
+  .tableData table tr td button i {
+    font-size: 12px;
+  }
+  
+  .tableData table tr td button:hover {
+    background: #008793;
+    color: white;
+  }
+  
+  footer {
+    width: 100%;
+    padding: 40px 0px 0px;
+    background: linear-gradient(0deg, #008793, #00879300), url(../images/footerbg.jpg);
+  }
+  
+  footer .containerBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  footer h2 {
+    margin-bottom: 22px;
+    color: white;
+  }
+  
+  footer ul li {
+    list-style-type: none;
+    margin-bottom: 8px;
+    color: white;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  footer ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  footer ul li i {
+    font-size: 14px;
+    position: absolute;
+    left: 0px;
+    top: 1px;
+  }
+  
+  .footerColumn img {
+    width: 120px;
+    margin-bottom: 16px;
+  }
+  
+  .footerBottom {
+    text-align: center;
+    margin-top: 30px;
+    background: #232020;
+    padding: 20px;
+    color: white;
+  }
+  
+  @media(max-width:768px) {
+    .middle .containerBox {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      position: relative;
+      top: 30px;
+      flex-basis: auto;
+      margin-bottom: 25px;
+    }
+  
+    header .headerTop .govt p {
+      font-size: 13px;
+    }
+  
+    .logout {
+      width: 130px;
+    }
+  
+    header .logout button {
+      padding: 4px 5px;
+    }
+  
+    header .ilrms .containerBox .logo img {
+      width: 30px;
+    }
+  
+    header .logo {
+      font-size: 30px;
+    }
+  
+    header .ilrms .headerSkew {
+      width: 215px;
+    }
+  
+    .cleanIndia {
+      display: flex;
+    }
+  
+    header .ilrms .containerBox .cleanIndia img {
+      width: 80px
+    }
+  }
